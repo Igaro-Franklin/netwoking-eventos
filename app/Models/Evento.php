@@ -8,6 +8,12 @@ class Evento extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'city', 'private', 'description'];
+    protected $fillable = ['title', 'city', 'private', 'description', 'items'];
+
+    protected $casts = [
+        'items' => 'array'
+    ];
+
+    protected $dates = ['date'];
 }
 

@@ -136,6 +136,16 @@ header{
     color: #757575;
 }
 
+#items-list{
+    list-style: none;
+    padding-left: 0;
+}
+
+#items-list li{
+    display: flex;
+    align-items: center;
+}
+
 
 /* --------------------------------- FOOTER --------------------------------- */
 footer{

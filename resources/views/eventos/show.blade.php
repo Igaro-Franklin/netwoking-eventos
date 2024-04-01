@@ -15,6 +15,14 @@
                 <p class="eventos-participantes"><ion-icon name="people-outline"></ion-icon>X Participantes</p>
                 <p class="dono-evento"><ion-icon name="star-outline"></ion-icon>Dono do Evento</p>
                 <a href="#" class="btn btn-primary" id="evento-submit">Confirmar Presença</a>
+                @if($evento->items)
+                <h3>O evento terá:</h3>
+                <ul id="items-list">
+                    @foreach(json_decode($evento->items) as $item)
+                        <li><ion-icon name="play-outline"></ion-icon><span>{{ $item }}</span></li>
+                    @endforeach
+                </ul>
+                @endif
             </div>
             <div class="col-md-12" id="description-container">
                 <h3>Sobre o evento:</h3>
