@@ -26,8 +26,15 @@
                         <td><a href="/eventos/{{$evento->id}}">{{ $evento->title }}</a></td>
                         <td>0</td>
                         <td>
-                            <a href="#">Editar</a>
-                            <a href="#">Excluír</a>
+                            <a href="#" class="btn btn-info edit-btn"> <ion-icon name="create-outline"></ion-icon>Editar</a>
+                            <form action="/eventos/{{ $evento->id }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger delete-btn">
+                                    <ion-icon name="trash-outline"></ion-icon>
+                                    Excluir
+                                </button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach

@@ -18,9 +18,11 @@ Route::get('/', [EventoController::class, 'index']);
 Route::get('/eventos/criar', [EventoController::class, 'criar'])->middleware('auth');
 Route::get('/eventos/{id}', [EventoController::class, 'show']);
 Route::post('/eventos', [EventoController::class, 'store']);
+Route::delete('/eventos/{id}', [EventoController::class, 'destroy']);
 
 Route::get('/contato', function () {
     return view('contato');
 });
 
 Route::get('/dashboard', [EventoController::class, 'dashboard'])->middleware('auth');
+

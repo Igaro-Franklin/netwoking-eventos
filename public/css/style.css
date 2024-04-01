@@ -148,11 +148,18 @@ header{
 
 
 /* --------------------------------- Página dashboard --------------------------------- */
-#dashboard-title-container{
+.dashboard-title-container{
     margin-bottom: 30px;
     margin-top: 30px;
 }
 
+.dashboard-eventos-container th{
+    width: 25%;
+}
+
+.dashboard-eventos-container form{
+    display: inline-block;
+}
 
 /* --------------------------------- FOOTER --------------------------------- */
 footer{
